@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<div class="main">
+<div class="main" id="main">
 	<div class="header">
 		<h2>
 			Книжная полка
 		</h2>
 		<div class="header-actions">
-			<button class="btn-add">
+			<button class="btn-add" id="btn-add">
 				Добавить новую книгу
 			</button>
 		</div>
@@ -23,58 +23,22 @@
 
 	<!--list of books-->
 	<div id="books-list" class="list">
-		<div class="book">
-			<img src="https://images-na.ssl-images-amazon.com/images/I/81gtKoapHFL.jpg" class="book-image">
-			<div class="info-about-book">
-				<p class="book-name">Design Patterns: Elements of Reusable Object-Oriented Software</p>
-				<p class="book-authors">Erich Gamma, John Vlissides, Ralph Johnson, Richard Helm</p>
-				<p class="book-year">1994</p>
-			</div>
-			<div class="book-buttons">
-				<button class="btn-update">Изменить</button>
-				<button class="btn-delete">Удалить</button>
-			</div>
-		</div>
-		<div class="book">
-			<img src="https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg" class="book-image">
-			<div class="info-about-book">
-				<p class="book-name">JavaScript: The Good Parts</p>
-				<p class="book-authors">Douglas Crockford</p>
-				<p class="book-year">2008</p>
-			</div>
-			<div class="book-buttons">
-				<button class="btn-update">Изменить</button>
-				<button class="btn-delete">Удалить</button>
-			</div>
-		</div>
-		<div class="book">
-			<img src="https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SX377_BO1,204,203,200_.jpg" class="book-image">
-			<div class="info-about-book">
-				<p class="book-name">JavaScript Patterns: Build Better Applications with Coding and Design Patterns</p>
-				<p class="book-authors">Stoyan Stefanov</p>
-				<p class="book-year">2010</p>
-			</div>
-			<div class="book-buttons">
-				<button class="btn-update">Изменить</button>
-				<button class="btn-delete">Удалить</button>
-			</div>
-		</div>
 	</div>
 
 
 	<!--add new book-->
-	<div class="adding-new-book">
+	<div class="adding-new-book" id="adding-new-book">
 		<p>Добавление новой книги</p>
 		<div class="actions">
-			<button class="btn-save">Сохранить</button>
-			<button class="btn-cancel">Отменить</button>
+			<button class="adding-btn-save" id="adding-btn-save">Сохранить</button>
+			<button class="adding-btn-cancel" id="adding-btn-cancel">Отменить</button>
 		</div>
 
 		<form class="adding-form">
 			<label for="name-input">Название</label>
 			<input type="text" name="name" id="name-input" class="input-class"/>
-			<label for="author-input">Авторы</label>
-			<input type="text" name="author" id="author-input" class="input-class"/>
+			<label for="authors-input">Авторы</label>
+			<input type="text" name="author" id="authors-input" class="input-class"/>
 			<label for="year-input">Год публикации</label>
 			<input type="number" max="2017" min="1000" name="year" id="year-input" class="input-class"/>
 			<label for="image-input">Изображение</label>
@@ -85,18 +49,18 @@
 
 	<!--update book-->
 
-	<div class="updating-book">
+	<div class="updating-book" id="updating-book">
 		<p>Редактирование</p>
 		<div class="actions">
-			<button class="btn-save">Сохранить</button>
-			<button class="btn-cancel">Отменить</button>
+			<button class="updating-btn-save" id="updating-btn-save">Сохранить</button>
+			<button class="updating-btn-cancel" id="updating-btn-cancel">Отменить</button>
 		</div>
 
 		<form class="updating-form">
 			<label for="name-input-updated">Название</label>
 			<input type="text" name="name-updated" id="name-input-updated" class="input-class"/>
-			<label for="author-input-updated">Авторы</label>
-			<input type="text" name="author-updated" id="author-input-updated" class="input-class"/>
+			<label for="authors-input-updated">Авторы</label>
+			<input type="text" name="author-updated" id="authors-input-updated" class="input-class"/>
 			<label for="year-input-updated">Год публикации</label>
 			<input type="number" max="2017" min="1000" name="year-updated" id="year-input-updated" class="input-class"/>
 			<label for="image-input-updated">Изображение</label>
@@ -106,7 +70,6 @@
 
 
 </div>
-<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/books.js"></script>
 </body>
 </html>
