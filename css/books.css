@@ -1,0 +1,166 @@
+/* header */
+
+.header {
+    display: block;
+    margin: 2% 5% 0% 5%;
+}
+
+
+/*list of books*/
+
+.main {
+    margin: 2% 5% 0% 5%;
+    display: block;
+}
+
+.btn-add {
+    width: 30%;
+    margin-bottom: 2%;
+}
+
+
+.book {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.image {
+    display: inline-block;
+    width: 10%;
+    height: 10%;
+    position: relative;
+    margin-top: 1em;
+}
+
+.info-about-book {
+    display: inline-block;
+    width: 65%;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+
+}
+
+.name {
+    display: block;
+
+}
+
+.authors {
+    display: block;
+}
+
+
+.year {
+    display: block;
+}
+
+.book-buttons {
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    vertical-align: top;
+    margin-top: 1em;
+    margin-right: -4px;
+
+}
+
+.btn-update {
+    display: block;
+    width: 100%;
+}
+
+.btn-delete {
+    display: block;
+    margin-top: 20%;
+    width: 100%;
+}
+
+
+
+
+/*updating book*/
+
+
+
+
+/*adding new book*/
+
+.adding-new-book {
+    margin: 3% 35% 0% 5%;
+    display: none;
+}
+
+.header-for-adding-form{
+    display: inline-block;
+}
+
+.save {
+    display: inline-block;
+}
+
+.cancel {
+    display: inline-block;
+}
+
+.adding-form {
+    margin-top: 3%;
+    display: block;
+}
+
+/*#name-input {*/
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*#author-input {*/
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    /*width: 100%;*/
+/*}*/
+
+#year-input {
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    width: 10%;
+}
+
+.input-cl {
+    display: block;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+
+/*updating book*/
+
+
+.updating-book {
+    margin: 3% 35% 0% 5%;
+    display: none;
+}
+
+
+.updating-form {
+    margin-top: 3%;
+    display: block;
+}
+
+/*#name-input-updated {*/
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*#author-input-updated {*/
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    /*width: 100%;*/
+/*}*/
+
+#year-input-updated {
+    /*display: block;*/
+    /*margin-bottom: 2%;*/
+    width: 10%;
+}
