@@ -1,0 +1,4 @@
+Guardfile
+.DS_Store
+.idea/
+*.iml
