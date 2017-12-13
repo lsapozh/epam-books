@@ -1,68 +1,91 @@
+
+.main {
+    width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        width: 300px;
+    }
+}
+
 /* header */
 
 .header {
-    display: block;
-    margin: 2% 5% 0% 5%;
+    display: flex;
+    align-items: center;
+    margin: 6% 0 10% 0;
 }
 
+.header h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
 
-/*list of books*/
+}
 
-.main {
-    margin: 2% 5% 0% 5%;
-    display: block;
+.header .header-actions {
+    float: right;
+    width: 40%;
 }
 
 .btn-add {
-    width: 30%;
-    margin-bottom: 2%;
+    display: inline-block;
+    width: 100%;
 }
 
+/*list of books*/
+
+.list {
+    display: block;
+}
 
 .book {
     display: block;
     margin-bottom: 2%;
 }
 
-.image {
+.book-image {
     display: inline-block;
     width: 10%;
     height: 10%;
-    position: relative;
-    margin-top: 1em;
 }
 
 .info-about-book {
     display: inline-block;
-    width: 65%;
+    width: 60%;
     position: relative;
     text-align: left;
     vertical-align: top;
-
 }
 
-.name {
+.book-name {
     display: block;
-
+    margin-top: 0;
 }
 
-.authors {
+.book-authors {
     display: block;
 }
 
-
-.year {
+.book-year {
     display: block;
 }
 
 .book-buttons {
+    float: right;
     display: inline-block;
-    position: relative;
-    width: 15%;
+    width: 20%;
     vertical-align: top;
-    margin-top: 1em;
-    margin-right: -4px;
-
 }
 
 .btn-update {
@@ -77,29 +100,28 @@
 }
 
 
-
-
 /*updating book*/
-
-
-
 
 /*adding new book*/
 
 .adding-new-book {
-    margin: 3% 35% 0% 5%;
     display: none;
 }
 
-.header-for-adding-form{
+.adding-new-book p{
+    margin-top: 0;
     display: inline-block;
 }
 
-.save {
+.adding-new-book .actions {
+    float: right;
+}
+
+.btn-save {
     display: inline-block;
 }
 
-.cancel {
+.btn-cancel {
     display: inline-block;
 }
 
@@ -108,59 +130,34 @@
     display: block;
 }
 
-/*#name-input {*/
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
-    /*width: 100%;*/
-/*}*/
-
-/*#author-input {*/
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
-    /*width: 100%;*/
-/*}*/
-
 #year-input {
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
     width: 10%;
 }
 
-.input-cl {
+.input-class {
     display: block;
     margin-bottom: 2%;
     width: 100%;
 }
 
 
-/*updating book*/
-
-
 .updating-book {
-    margin: 3% 35% 0% 5%;
     display: none;
 }
 
+.updating-book p {
+    margin-top: 0;
+    display: inline-block;
+}
+.updating-book .actions {
+    float: right;
+}
 
 .updating-form {
     margin-top: 3%;
     display: block;
 }
 
-/*#name-input-updated {*/
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
-    /*width: 100%;*/
-/*}*/
-
-/*#author-input-updated {*/
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
-    /*width: 100%;*/
-/*}*/
-
 #year-input-updated {
-    /*display: block;*/
-    /*margin-bottom: 2%;*/
     width: 10%;
 }
