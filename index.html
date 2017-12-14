@@ -15,7 +15,7 @@
 			Книжная полка
 		</p>
 		<div class="header-actions">
-			<button class="btn-add" id="btn-add">
+			<button class="btn-add btn-cyan" id="btn-add">
 				Добавить новую книгу
 			</button>
 		</div>
@@ -31,10 +31,15 @@
 	<div class="adding-new-book container" id="adding-new-book">
 		<p>Добавление новой книги</p>
 		<div class="actions">
-			<button class="adding-btn-save" id="adding-btn-save">Сохранить</button>
-			<button class="adding-btn-cancel btn-cancel" id="adding-btn-cancel">Отменить</button>
+			<button class="adding-btn-save btn-cyan" id="adding-btn-save">
+				<span class="btn-text">Сохранить</span>
+				<i class="fa fa-check icons" aria-hidden="true"></i>
+			</button>
+			<button class="adding-btn-cancel btn-cancel btn-red" id="adding-btn-cancel">
+				<span class="btn-text">Отменить</span>
+				<i class="fa fa-times icons" aria-hidden="true"></i>
+			</button>
 		</div>
-
 
 		<form class="adding-form">
 			<label for="name-input">Название</label>
@@ -54,8 +59,14 @@
 	<div class="updating-book container" id="updating-book">
 		<p>Редактирование</p>
 		<div class="actions">
-			<button class="updating-btn-save" id="updating-btn-save">Сохранить</button>
-			<button class="updating-btn-cancel btn-cancel" id="updating-btn-cancel">Отменить</button>
+			<button class="updating-btn-save btn-cyan" id="updating-btn-save">
+				<span class="btn-text">Сохранить</span>
+				<i class="fa fa-check icons" aria-hidden="true"></i>
+			</button>
+			<button class="updating-btn-cancel btn-cancel btn-red" id="updating-btn-cancel">
+				<span class="btn-text">Отменить</span>
+				<i class="fa fa-times icons" aria-hidden="true"></i>
+			</button>
 		</div>
 
 		<form class="updating-form">

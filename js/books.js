@@ -31,8 +31,14 @@ function paintListOfBooks() {
             "    <p class=\"book-year\">" + currentBook.year+ "</p>\n" +
             "</div>\n" +
             "<div class=\"book-buttons\">\n" +
-            "    <button class=\"btn-update\" id=\"btn-update-book-" + books.indexOf(currentBook) + "\"\>Изменить</button>\n" +
-            "    <button class=\"btn-delete\" id=\"btn-delete-book-" + books.indexOf(currentBook)+ "\"\>Удалить</button>\n" +
+            "    <button class=\"btn-update btn-cyan\" id=\"btn-update-book-" + books.indexOf(currentBook) + "\"\>" +
+            "       <span class=\"btn-text\">Изменить</span>" +
+            "       <i class=\"fa fa-pencil-square-o icons\" aria-hidden=\"true\"></i>" +
+            "    </button>\n" +
+            "    <button class=\"btn-delete btn-red\" id=\"btn-delete-book-" + books.indexOf(currentBook)+ "\"\>" +
+            "       <span class=\"btn-text\">Удалить</span>" +
+            "       <i class=\"fa fa-times icons\" aria-hidden=\"true\"></i>" +
+            "</button>\n" +
             "</div>" +
             "<div class=\"clear\"></div>";
         document.getElementById("books-list").appendChild(book);

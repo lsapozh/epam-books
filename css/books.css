@@ -20,22 +20,32 @@ body {
     display: none;
 }
 
+i.icons {
+    display: none;
+}
 
 .main {
     width: 700px;
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .main {
-        width: 500px;
-    }
+
+.btn-cyan {
+    font-family: 'Spectral SC', serif;
+    background-color: darkcyan;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
 }
 
-@media (max-width: 500px) {
-    .main {
-        width: 300px;
-    }
+.btn-red {
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darksalmon;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
 
 /* header */
@@ -64,12 +74,6 @@ body {
 .btn-add {
     display: inline-block;
     width: 100%;
-    font-family: 'Spectral SC', serif;
-    background-color: darkcyan;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
-    font-size: 12px;
 }
 
 /*list of books*/
@@ -109,6 +113,7 @@ body {
     display: block;
     margin: 0;
     font-weight: 500;
+    font-size: 16px;
 }
 
 .book-authors {
@@ -133,30 +138,17 @@ body {
 .btn-update {
     display: block;
     width: 100%;
-    font-family: 'Spectral SC', serif;
-    font-size: 12px;
-    background-color: darkcyan;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
 }
 
 .btn-delete {
     display: block;
     margin-top: 10%;
     width: 100%;
-    font-family: 'Spectral SC', serif;
-    font-size: 12px;
-    background-color: darksalmon;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
 }
 
 
 
 /*updating book*/
-
 /*adding new book*/
 
 .adding-new-book {
@@ -179,22 +171,10 @@ body {
 
 .adding-btn-save {
     display: inline-block;
-    font-family: 'Spectral SC', serif;
-    font-size: 12px;
-    background-color: darkcyan;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
 }
 
 .btn-cancel {
     display: inline-block;
-    font-family: 'Spectral SC', serif;
-    font-size: 12px;
-    background-color: darksalmon;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
 }
 
 .adding-form {
@@ -230,12 +210,7 @@ body {
 }
 
 .updating-btn-save {
-    font-family: 'Spectral SC', serif;
-    font-size: 12px;
-    background-color: darkcyan;
-    font-weight: 600;
-    color: white;
-    padding: 8px;
+
 }
 
 .updating-form {
@@ -245,4 +220,59 @@ body {
 
 #year-input-updated {
     width: 10%;
+}
+
+
+/*if monitor size change*/
+
+@media (max-width: 768px) {
+    .main {
+        width: 500px;
+    }
+
+    .book-name {
+        font-size: 14px;
+    }
+
+    .book-authors {
+        display: block;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .book-year {
+        display: block;
+        font-size: 11px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        width: 350px;
+    }
+
+    .book-name {
+        font-size: 12px;
+    }
+
+    .book-authors {
+        display: block;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .book-year {
+        display: block;
+        font-size: 9px;
+        margin: 0;
+    }
+
+    .btn-text {
+        display: none;
+    }
+
+    i.icons {
+        display: inline-block;
+    }
 }
