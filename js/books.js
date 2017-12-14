@@ -1,39 +1,28 @@
-
-let books = [];
-let currentBookIndex;
-initBooks();
-paintListOfBooks();
-switchOnListeners();
-switchOnListenerForList();
-
-
 function initBooks() {
-    books[0] = {
+    books = [{
         name: "Design Patterns: Elements of Reusable Object-Oriented Software",
         authors: "Erich Gamma, John Vlissides, Ralph Johnson, Richard Helm",
         year: "1994",
         image: "https://images-na.ssl-images-amazon.com/images/I/81gtKoapHFL.jpg"
-    }
-
-    books[1] = {
+    },
+        {
         name: "JavaScript: The Good Parts",
         authors: "Douglas Crockford",
         year: "2008",
         image: "https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg"
-    }
-
-    books[2] = {
+    }, {
         name: "JavaScript Patterns: Build Better Applications with Coding and Design Patterns",
         authors: "Stoyan Stefanov",
         year: 2008,
         image: "https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SX377_BO1,204,203,200_.jpg"
-    }
+    }];
 }
 
 function paintListOfBooks() {
     document.getElementById("books-list").innerHTML = "";
     books.forEach((currentBook) => {
         var book = document.createElement('div');
+        book.className = "book container";
         book.innerHTML = "" +
             "<img src=\"" + currentBook.image + "\" class=\"book-image\">\n" +
             "<div class=\"info-about-book\">\n" +
@@ -44,7 +33,8 @@ function paintListOfBooks() {
             "<div class=\"book-buttons\">\n" +
             "    <button class=\"btn-update\" id=\"btn-update-book-" + books.indexOf(currentBook) + "\"\>Изменить</button>\n" +
             "    <button class=\"btn-delete\" id=\"btn-delete-book-" + books.indexOf(currentBook)+ "\"\>Удалить</button>\n" +
-            "</div>";
+            "</div>" +
+            "<div class=\"clear\"></div>";
         document.getElementById("books-list").appendChild(book);
     });
 }
@@ -64,6 +54,16 @@ function returnToBooksList() {
 }
 
 
+function showAddingPage() {
+    hidePage("books-list");
+    hidePage("updating-book");
+    showPage("adding-new-book");
+    document.getElementById("name-input").value = null;
+    document.getElementById("authors-input").value = null;
+    document.getElementById("year-input").value = null;
+    document.getElementById("image-input").value = null;
+}
+
 function saveNewBook() {
     let name = document.getElementById("name-input").value;
     let authors = document.getElementById("authors-input").value;
@@ -73,19 +73,12 @@ function saveNewBook() {
     paintListOfBooks();
     switchOnListenerForList();
     returnToBooksList();
+    saveToLocalStorage()
 }
 
-function addBook() {
+function showUpdatingPage(id) {
     hidePage("books-list");
-    showPage("adding-new-book");
-    document.getElementById("name-input").value = null;
-    document.getElementById("authors-input").value = null;
-    document.getElementById("year-input").value = null;
-    document.getElementById("image-input").value = null;
-}
-
-function updateBook(id) {
-    hidePage("books-list");
+    hidePage("adding-new-book");
     showPage("updating-book");
     let book = books[id];
     document.getElementById("name-input-updated").value = book.name;
@@ -103,6 +96,7 @@ function saveUpdatedBook(id) {
     paintListOfBooks();
     switchOnListenerForList();
     returnToBooksList();
+    saveToLocalStorage()
 }
 
 function deleteBook(id) {
@@ -110,11 +104,12 @@ function deleteBook(id) {
     paintListOfBooks();
     switchOnListenerForList();
     returnToBooksList();
+    saveToLocalStorage();
 }
 
 function switchOnListeners() {
     document.getElementById("btn-add").addEventListener('click', () => {
-        addBook();
+        showAddingPage();
     });
     document.getElementById("adding-btn-cancel").addEventListener('click', () => {
         returnToBooksList();
@@ -138,10 +133,29 @@ function switchOnListenerForList() {
         });
         document.getElementById("btn-update-book-" + index).addEventListener('click', () => {
             currentBookIndex = index;
-            updateBook(index);
+            showUpdatingPage(index);
         });
     });
 }
+
+function saveToLocalStorage() {
+    localStorage.setItem("books", JSON.stringify(books));
+}
+
+
+
+let books = [];
+localStorage.clear();
+if (localStorage.getItem("books")) {
+    books = JSON.parse(localStorage.getItem("books"));
+} else {
+    initBooks();
+}
+
+let currentBookIndex;
+paintListOfBooks();
+switchOnListeners();
+switchOnListenerForList();
 
 
 

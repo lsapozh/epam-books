@@ -3,16 +3,17 @@
 <head>
 	<title>Epam Books</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="/css/books.css">
+	<link href="https://fonts.googleapis.com/css?family=Spectral+SC:200,300,400,500,600,700,800" rel="stylesheet">
 </head>
 <body>
 
 <div class="main" id="main">
 	<div class="header">
-		<h2>
+		<p>
 			Книжная полка
-		</h2>
+		</p>
 		<div class="header-actions">
 			<button class="btn-add" id="btn-add">
 				Добавить новую книгу
@@ -27,12 +28,13 @@
 
 
 	<!--add new book-->
-	<div class="adding-new-book" id="adding-new-book">
+	<div class="adding-new-book container" id="adding-new-book">
 		<p>Добавление новой книги</p>
 		<div class="actions">
 			<button class="adding-btn-save" id="adding-btn-save">Сохранить</button>
-			<button class="adding-btn-cancel" id="adding-btn-cancel">Отменить</button>
+			<button class="adding-btn-cancel btn-cancel" id="adding-btn-cancel">Отменить</button>
 		</div>
+
 
 		<form class="adding-form">
 			<label for="name-input">Название</label>
@@ -49,11 +51,11 @@
 
 	<!--update book-->
 
-	<div class="updating-book" id="updating-book">
+	<div class="updating-book container" id="updating-book">
 		<p>Редактирование</p>
 		<div class="actions">
 			<button class="updating-btn-save" id="updating-btn-save">Сохранить</button>
-			<button class="updating-btn-cancel" id="updating-btn-cancel">Отменить</button>
+			<button class="updating-btn-cancel btn-cancel" id="updating-btn-cancel">Отменить</button>
 		</div>
 
 		<form class="updating-form">
@@ -67,6 +69,8 @@
 			<input type="url" name="image-updated" id="image-input-updated" class="input-class"/>
 		</form>
 	</div>
+
+
 
 
 </div>

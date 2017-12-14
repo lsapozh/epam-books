@@ -1,3 +1,13 @@
+body {
+    background-color: #d3d3d347;
+
+}
+
+.container {
+    background-color: white;
+    /*background-color: #d3d3d347;*/
+}
+
 
 .main {
     width: 700px;
@@ -24,13 +34,14 @@
     margin: 6% 0 10% 0;
 }
 
-.header h2 {
+.header p {
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
     vertical-align: top;
     width: 60%;
-
+    font-family: 'Spectral SC', serif;
+    font-size: 30px;
 }
 
 .header .header-actions {
@@ -41,6 +52,12 @@
 .btn-add {
     display: inline-block;
     width: 100%;
+    font-family: 'Spectral SC', serif;
+    background-color: darkcyan;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
 }
 
 /*list of books*/
@@ -52,12 +69,18 @@
 .book {
     display: block;
     margin-bottom: 2%;
+    padding: 5%;
+}
+
+.clear {
+    clear: both;
 }
 
 .book-image {
     display: inline-block;
     width: 10%;
     height: 10%;
+    padding-right: 2%;
 }
 
 .info-about-book {
@@ -66,19 +89,25 @@
     position: relative;
     text-align: left;
     vertical-align: top;
+    font-family: 'Spectral SC', serif;
 }
 
 .book-name {
     display: block;
-    margin-top: 0;
+    margin: 0;
+    font-weight: 500;
 }
 
 .book-authors {
     display: block;
+    font-size: 14px;
+    margin: 0;
 }
 
 .book-year {
     display: block;
+    font-size: 13px;
+    margin: 0;
 }
 
 .book-buttons {
@@ -91,13 +120,26 @@
 .btn-update {
     display: block;
     width: 100%;
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darkcyan;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
 
 .btn-delete {
     display: block;
-    margin-top: 20%;
+    margin-top: 10%;
     width: 100%;
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darksalmon;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
+
 
 
 /*updating book*/
@@ -106,23 +148,40 @@
 
 .adding-new-book {
     display: none;
+    font-family: 'Spectral SC', serif;
+    /*background-color: white;*/
+    padding: 30px;
 }
 
 .adding-new-book p{
     margin-top: 0;
     display: inline-block;
+
 }
 
 .adding-new-book .actions {
     float: right;
+    margin-top: -0.8%;
 }
 
 .adding-btn-save {
     display: inline-block;
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darkcyan;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
 
 .btn-cancel {
     display: inline-block;
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darksalmon;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
 
 .adding-form {
@@ -138,19 +197,32 @@
     display: block;
     margin-bottom: 2%;
     width: 100%;
+    font-size: 12px;
 }
-
 
 .updating-book {
     display: none;
+    font-family: 'Spectral SC', serif;
+    padding: 30px;
 }
 
 .updating-book p {
     margin-top: 0;
     display: inline-block;
 }
+
 .updating-book .actions {
     float: right;
+    margin-top: -0.8%;
+}
+
+.updating-btn-save {
+    font-family: 'Spectral SC', serif;
+    font-size: 12px;
+    background-color: darkcyan;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
 }
 
 .updating-form {
