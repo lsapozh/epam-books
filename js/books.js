@@ -59,11 +59,19 @@ function returnToBooksList() {
     show("books-list");
 }
 
+function isCorrectValue(year) {
+    if (year <= 2017 && year >= 0) {
+        return true;
+    } else return false;
+}
+
 
 function showAddingPage() {
     hide("books-list");
     hide("updating-book");
     show("adding-new-book");
+    hide("adding-error");
+    hide("updating-error");
     document.getElementById("name-input").value = null;
     document.getElementById("authors-input").value = null;
     document.getElementById("year-input").value = null;
@@ -75,17 +83,23 @@ function saveNewBook() {
     let authors = document.getElementById("authors-input").value;
     let year = document.getElementById("year-input").value;
     let image = document.getElementById("image-input").value;
-    books.push({name: name, authors: authors, year: year, image: image});
-    paintListOfBooks();
-    switchOnListenerForList();
-    returnToBooksList();
-    saveToLocalStorage()
+    if(isCorrectValue(year)) {
+        books.push({name: name, authors: authors, year: year, image: image});
+        paintListOfBooks();
+        switchOnListenerForList();
+        returnToBooksList();
+        saveToLocalStorage();
+    } else {
+        show("adding-error");
+    }
 }
 
 function showUpdatingPage(id) {
     hide("books-list");
     hide("adding-new-book");
     show("updating-book");
+    hide("adding-error");
+    hide("updating-error");
     let book = books[id];
     document.getElementById("name-input-updated").value = book.name;
     document.getElementById("authors-input-updated").value = book.authors;
@@ -98,11 +112,13 @@ function saveUpdatedBook(id) {
     let authors = document.getElementById("authors-input-updated").value;
     let year = document.getElementById("year-input-updated").value;
     let image = document.getElementById("image-input-updated").value;
-    books[id] = {name: name, authors: authors, year: year, image: image};
-    paintListOfBooks();
-    switchOnListenerForList();
-    returnToBooksList();
-    saveToLocalStorage()
+    if (isCorrectValue(year)) {
+        books[id] = {name: name, authors: authors, year: year, image: image};
+        paintListOfBooks();
+        switchOnListenerForList();
+        returnToBooksList();
+        saveToLocalStorage();
+    } else show("updating-error");
 }
 
 function deleteBook(id) {

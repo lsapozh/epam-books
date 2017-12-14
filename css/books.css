@@ -48,6 +48,13 @@ i.icons {
     padding: 8px;
 }
 
+.error {
+    display: none;
+    margin-top: 7px;
+    padding: 5px;
+    background-color: rgba(233, 150, 122, 0.42);
+}
+
 /* header */
 
 .header {
