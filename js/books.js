@@ -39,25 +39,25 @@ function paintListOfBooks() {
     });
 }
 
-function showPage(id) {
+function show(id) {
     document.getElementById(id).style.display = "block";
 }
 
-function hidePage(id) {
+function hide(id) {
     document.getElementById(id).style.display = "none";
 }
 
 function returnToBooksList() {
-    hidePage("adding-new-book");
-    hidePage("updating-book");
-    showPage("books-list");
+    hide("adding-new-book");
+    hide("updating-book");
+    show("books-list");
 }
 
 
 function showAddingPage() {
-    hidePage("books-list");
-    hidePage("updating-book");
-    showPage("adding-new-book");
+    hide("books-list");
+    hide("updating-book");
+    show("adding-new-book");
     document.getElementById("name-input").value = null;
     document.getElementById("authors-input").value = null;
     document.getElementById("year-input").value = null;
@@ -77,9 +77,9 @@ function saveNewBook() {
 }
 
 function showUpdatingPage(id) {
-    hidePage("books-list");
-    hidePage("adding-new-book");
-    showPage("updating-book");
+    hide("books-list");
+    hide("adding-new-book");
+    show("updating-book");
     let book = books[id];
     document.getElementById("name-input-updated").value = book.name;
     document.getElementById("authors-input-updated").value = book.authors;
@@ -107,6 +107,23 @@ function deleteBook(id) {
     saveToLocalStorage();
 }
 
+function addScrollListener() {
+    let showButton = false;
+    window.addEventListener('scroll', function (e) {
+        if (window.scrollY > 80) {
+            if (!showButton) {
+                showButton = true;
+                show("btn-plus");
+            }
+        } else {
+            if (showButton) {
+                showButton = false;
+                hide("btn-plus");
+            }
+        }
+    });
+}
+
 function switchOnListeners() {
     document.getElementById("btn-add").addEventListener('click', () => {
         showAddingPage();
@@ -123,6 +140,10 @@ function switchOnListeners() {
     document.getElementById("updating-btn-save").addEventListener('click', () => {
         saveUpdatedBook(currentBookIndex);
     });
+    document.getElementById("btn-plus").addEventListener('click', () => {
+        showAddingPage();
+    });
+    addScrollListener();
 
 }
 
@@ -145,7 +166,7 @@ function saveToLocalStorage() {
 
 
 let books = [];
-localStorage.clear();
+// localStorage.clear();
 if (localStorage.getItem("books")) {
     books = JSON.parse(localStorage.getItem("books"));
 } else {
